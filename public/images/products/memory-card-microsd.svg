@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.18"/>
+      <stop offset="45%" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="pedestal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#020617" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="titaniumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="25%" stop-color="#94A3B8"/>
+      <stop offset="50%" stop-color="#CBD5E1"/>
+      <stop offset="75%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+    <linearGradient id="pcbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="50%" stop-color="#065F46"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Studio Background -->
+  <rect width="800" height="800" fill="url(#bgGlow)"/>
+
+  <!-- Subtle Studio Grid -->
+  <g opacity="0.07" stroke="#94A3B8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+  </g>
+
+  <!-- Ambient Floor Shadow -->
+  <ellipse cx="400" cy="690" rx="280" ry="42" fill="url(#pedestal)"/>
+
+  <!-- Product Asset Graphic -->
+  <g id="packshot-object" filter="url(#dropShadow)">
+    
+    <g transform="translate(240, 160)">
+      <!-- Classic MicroSD Form Factor Body with Notches -->
+      <path d="M 0 20 L 0 420 L 320 420 L 320 120 L 305 105 L 305 60 L 290 45 L 290 0 L 20 0 Z" 
+            fill="#18181B" stroke="#3F3F46" stroke-width="2"/>
+      
+      <!-- Top Metallic Gold Half Band -->
+      <path d="M 0 20 L 0 160 L 320 160 L 320 120 L 305 105 L 305 60 L 290 45 L 290 0 L 20 0 Z" 
+            fill="url(#goldGrad)"/>
+
+      <!-- Crisp Typography on Gold Header -->
+      <g transform="translate(30, 50)">
+        <text x="0" y="30" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="34" font-weight="900" fill="#0F172A" letter-spacing="1">APEX</text>
+        <text x="0" y="55" font-family="sans-serif" font-size="14" font-weight="900" fill="#78350F">EXTREME PRO</text>
+        <text x="0" y="80" font-family="monospace" font-size="11" font-weight="700" fill="#92400E">160 MB/s ● V30 4K</text>
+      </g>
+
+      <!-- Bottom Black Section Information -->
+      <g transform="translate(30, 200)">
+        <!-- Giant Capacity Indicator -->
+        <text x="0" y="65" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="64" font-weight="900" fill="#FFFFFF">128</text>
+        <text x="125" y="40" font-family="sans-serif" font-size="20" font-weight="900" fill="#FBBF24">GB</text>
+
+        <!-- Speed & Format Standard Badges -->
+        <g transform="translate(0, 100)">
+          <!-- MicroSDXC I -->
+          <text x="0" y="20" font-family="sans-serif" font-size="16" font-weight="800" fill="#E2E8F0">MicroSDXC I</text>
+          
+          <!-- U3 Badge -->
+          <rect x="130" y="4" width="26" height="24" rx="3" fill="#18181B" stroke="#FBBF24" stroke-width="2"/>
+          <text x="143" y="21" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="900" fill="#FBBF24">3</text>
+
+          <!-- V30 Badge -->
+          <rect x="168" y="4" width="38" height="24" rx="3" fill="#0284C7"/>
+          <text x="187" y="20" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="900" fill="#FFFFFF">V30</text>
+
+          <!-- A2 Application Class Badge -->
+          <rect x="216" y="4" width="32" height="24" rx="3" fill="#10B981"/>
+          <text x="232" y="20" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="900" fill="#FFFFFF">A2</text>
+        </g>
+
+        <!-- 4K Ultra HD Text -->
+        <text x="0" y="160" font-family="sans-serif" font-size="12" font-weight="700" fill="#94A3B8">4K ULTRA HD / ACTION CAM READY</text>
+      </g>
+    </g>
+  
+  </g>
+
+  <!-- Technical Packshot Watermark & Badge -->
+  <g opacity="0.75">
+    <rect x="40" y="40" width="160" height="26" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="54" cy="53" r="4" fill="#F59E0B"/>
+    <text x="66" y="57" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="1">APEX VERIFIED</text>
+  </g>
+
+  <g opacity="0.6" transform="translate(620, 40)">
+    <text x="140" y="16" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="1.5">V30 • A2 • 160MB/S</text>
+  </g>
+
+  <!-- Bottom Spec Label -->
+  <g opacity="0.85" transform="translate(400, 755)">
+    <text text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#CBD5E1" letter-spacing="0.5">128GB MICROSDXC EXTREME UHS-I</text>
+  </g>
+</svg>

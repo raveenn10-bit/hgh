@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#0066FF" stop-opacity="0.18"/>
+      <stop offset="45%" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="pedestal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0066FF" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#020617" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="titaniumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="25%" stop-color="#94A3B8"/>
+      <stop offset="50%" stop-color="#CBD5E1"/>
+      <stop offset="75%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+    <linearGradient id="pcbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="50%" stop-color="#065F46"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Studio Background -->
+  <rect width="800" height="800" fill="url(#bgGlow)"/>
+
+  <!-- Subtle Studio Grid -->
+  <g opacity="0.07" stroke="#94A3B8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+  </g>
+
+  <!-- Ambient Floor Shadow -->
+  <ellipse cx="400" cy="690" rx="280" ry="42" fill="url(#pedestal)"/>
+
+  <!-- Product Asset Graphic -->
+  <g id="packshot-object" filter="url(#dropShadow)">
+    
+    <!-- Main Flagship Smartphone (Natural Titanium) -->
+    <g transform="translate(230, 110)">
+      <!-- Outer Metal Frame -->
+      <rect x="0" y="0" width="340" height="560" rx="48" fill="url(#titaniumGrad)" stroke="#64748B" stroke-width="2"/>
+      
+      <!-- Screen Bezel -->
+      <rect x="8" y="8" width="324" height="544" rx="42" fill="#090D16" stroke="#1E293B" stroke-width="1.5"/>
+      
+      <!-- OLED Display Content -->
+      <rect x="12" y="12" width="316" height="536" rx="38" fill="#050811"/>
+      
+      <!-- Vivid Abstract Screen Wallpaper Graphic -->
+      <path d="M 12 280 C 80 180, 200 350, 328 200 L 328 548 L 12 548 Z" fill="url(#accentGrad)" opacity="0.85"/>
+      <path d="M 12 360 C 120 280, 220 460, 328 340 L 328 548 L 12 548 Z" fill="#4F46E5" opacity="0.75"/>
+      <path d="M 12 440 C 140 380, 240 500, 328 420 L 328 548 L 12 548 Z" fill="#06B6D4" opacity="0.6"/>
+      
+      <!-- Glossy Diagonal Reflection -->
+      <path d="M 12 12 L 220 12 L 12 400 Z" fill="url(#glassReflection)"/>
+
+      <!-- Dynamic Island / Top Pill -->
+      <rect x="120" y="24" width="100" height="28" rx="14" fill="#000000"/>
+      <!-- TrueDepth Camera Lens -->
+      <circle cx="142" cy="38" r="5" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+      <circle cx="142" cy="38" r="2" fill="#0284C7"/>
+      <!-- Ambient sensor -->
+      <circle cx="198" cy="38" r="3.5" fill="#0A0E1A"/>
+
+      <!-- Status Bar -->
+      <text x="36" y="42" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">9:41</text>
+      <!-- Battery & Signal -->
+      <rect x="274" y="32" width="22" height="12" rx="3" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+      <rect x="276" y="34" width="15" height="8" rx="1.5" fill="#10B981"/>
+      <rect x="297" y="35" width="2" height="6" rx="1" fill="#FFFFFF"/>
+
+      <!-- Home Indicator Bar -->
+      <rect x="105" y="534" width="130" height="5" rx="2.5" fill="#FFFFFF" opacity="0.8"/>
+      
+      <!-- Side Button Accents -->
+      <rect x="-3" y="120" width="3" height="48" rx="1.5" fill="#94A3B8"/>
+      <rect x="-3" y="180" width="3" height="48" rx="1.5" fill="#94A3B8"/>
+      <rect x="340" y="150" width="3" height="75" rx="1.5" fill="#94A3B8"/>
+    </g>
+  
+  </g>
+
+  <!-- Technical Packshot Watermark & Badge -->
+  <g opacity="0.75">
+    <rect x="40" y="40" width="160" height="26" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="54" cy="53" r="4" fill="#0066FF"/>
+    <text x="66" y="57" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="1">APEX VERIFIED</text>
+  </g>
+
+  <g opacity="0.6" transform="translate(620, 40)">
+    <text x="140" y="16" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="1.5">FLAGSHIP OEM</text>
+  </g>
+
+  <!-- Bottom Spec Label -->
+  <g opacity="0.85" transform="translate(400, 755)">
+    <text text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#CBD5E1" letter-spacing="0.5">APEX PRO SMARTPHONE 5G</text>
+  </g>
+</svg>

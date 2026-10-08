@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.18"/>
+      <stop offset="45%" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="pedestal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#020617" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="titaniumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="25%" stop-color="#94A3B8"/>
+      <stop offset="50%" stop-color="#CBD5E1"/>
+      <stop offset="75%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+    <linearGradient id="pcbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="50%" stop-color="#065F46"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Studio Background -->
+  <rect width="800" height="800" fill="url(#bgGlow)"/>
+
+  <!-- Subtle Studio Grid -->
+  <g opacity="0.07" stroke="#94A3B8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+  </g>
+
+  <!-- Ambient Floor Shadow -->
+  <ellipse cx="400" cy="690" rx="280" ry="42" fill="url(#pedestal)"/>
+
+  <!-- Product Asset Graphic -->
+  <g id="packshot-object" filter="url(#dropShadow)">
+    
+    <g transform="translate(160, 180)">
+      <!-- Main Desktop Digital Station Base -->
+      <rect x="0" y="60" width="280" height="240" rx="16" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      
+      <!-- Blue Bevel Top Accent -->
+      <rect x="0" y="60" width="280" height="12" rx="6" fill="#0284C7"/>
+
+      <!-- OLED Digital Temperature Screen -->
+      <rect x="30" y="100" width="220" height="90" rx="8" fill="#020617" stroke="#334155" stroke-width="1.5"/>
+      <text x="50" y="145" font-family="monospace" font-size="36" font-weight="900" fill="#38BDF8" letter-spacing="1">380°C</text>
+      <text x="180" y="130" font-family="monospace" font-size="11" font-weight="700" fill="#10B981">REAL TEMP</text>
+      <text x="180" y="150" font-family="monospace" font-size="10" fill="#94A3B8">SET: 380°C</text>
+      <text x="50" y="175" font-family="monospace" font-size="9" fill="#F59E0B">HEATING: POWER 92% ■■■■■□</text>
+
+      <!-- Aluminum Temperature Rotary Encoder Knob -->
+      <circle cx="80" cy="240" r="32" fill="url(#titaniumGrad)" stroke="#64748B" stroke-width="2"/>
+      <circle cx="80" cy="240" r="22" fill="#0F172A"/>
+      <line x1="80" y1="218" x2="80" y2="228" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Preset Buttons CH1, CH2, CH3 -->
+      <g transform="translate(150, 225)">
+        <rect x="0" y="0" width="28" height="24" rx="4" fill="#334155" stroke="#64748B" stroke-width="1"/>
+        <text x="14" y="16" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">1</text>
+        <rect x="36" y="0" width="28" height="24" rx="4" fill="#0284C7" stroke="#38BDF8" stroke-width="1"/>
+        <text x="50" y="16" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">2</text>
+        <rect x="72" y="0" width="28" height="24" rx="4" fill="#334155" stroke="#64748B" stroke-width="1"/>
+        <text x="86" y="16" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">3</text>
+      </g>
+
+      <!-- Heavy Brass Tip Stand & Cleaner -->
+      <g transform="translate(320, 160)">
+        <rect x="0" y="60" width="160" height="80" rx="12" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+        <!-- Brass Wire Sponge Ball -->
+        <circle cx="80" cy="95" r="32" fill="#D97706" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4,3"/>
+        <circle cx="80" cy="95" r="24" fill="#B45309" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="80" y="132" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#94A3B8">CLEANER</text>
+      </g>
+
+      <!-- Precision Ergonomic Soldering Iron Handle & Glowing Tip -->
+      <g transform="translate(350, 30) rotate(42)">
+        <!-- Flexible Silicone Cable -->
+        <path d="M 0 0 C -40 20, -120 -20, -180 80" fill="none" stroke="#0284C7" stroke-width="7" stroke-linecap="round"/>
+        <!-- Handle Grip -->
+        <rect x="0" y="-12" width="160" height="24" rx="8" fill="#0284C7" stroke="#0369A1" stroke-width="1.5"/>
+        <rect x="80" y="-14" width="60" height="28" rx="6" fill="#0F172A"/> <!-- Heat barrier -->
+        <!-- Stainless Steel Heating Element Collar -->
+        <rect x="160" y="-7" width="70" height="14" rx="2" fill="url(#titaniumGrad)" stroke="#64748B" stroke-width="1"/>
+        <!-- Fine C210 / C245 Nano Soldering Tip -->
+        <polygon points="230,-5 270,-1 270,1 230,5" fill="#E2E8F0" stroke="#94A3B8" stroke-width="0.5"/>
+        <!-- Glowing Red/Orange Heat Tip -->
+        <circle cx="270" cy="0" r="10" fill="#EF4444" opacity="0.6" filter="url(#neonGlow)"/>
+        <polygon points="255,-3 273,-0.5 273,0.5 255,3" fill="#F59E0B"/>
+      </g>
+    </g>
+  
+  </g>
+
+  <!-- Technical Packshot Watermark & Badge -->
+  <g opacity="0.75">
+    <rect x="40" y="40" width="160" height="26" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="54" cy="53" r="4" fill="#F59E0B"/>
+    <text x="66" y="57" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="1">APEX VERIFIED</text>
+  </g>
+
+  <g opacity="0.6" transform="translate(620, 40)">
+    <text x="140" y="16" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="1.5">NANO C210 / 380°C</text>
+  </g>
+
+  <!-- Bottom Spec Label -->
+  <g opacity="0.85" transform="translate(400, 755)">
+    <text text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#CBD5E1" letter-spacing="0.5">SMART PRECISION SOLDERING STATION</text>
+  </g>
+</svg>

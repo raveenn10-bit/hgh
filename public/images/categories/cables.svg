@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#0066FF" stop-opacity="0.18"/>
+      <stop offset="45%" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="pedestal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0066FF" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#020617" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="titaniumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="25%" stop-color="#94A3B8"/>
+      <stop offset="50%" stop-color="#CBD5E1"/>
+      <stop offset="75%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+    <linearGradient id="pcbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="50%" stop-color="#065F46"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Studio Background -->
+  <rect width="800" height="800" fill="url(#bgGlow)"/>
+
+  <!-- Subtle Studio Grid -->
+  <g opacity="0.07" stroke="#94A3B8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+  </g>
+
+  <!-- Ambient Floor Shadow -->
+  <ellipse cx="400" cy="690" rx="280" ry="42" fill="url(#pedestal)"/>
+
+  <!-- Product Asset Graphic -->
+  <g id="packshot-object" filter="url(#dropShadow)">
+    
+    <g transform="translate(200, 140)">
+      <!-- Tightly Coiled Heavy Duty Braided Cable Bundle -->
+      <g fill="none" stroke-linecap="round">
+        <!-- Outer braided loops with dual-tone texture -->
+        <circle cx="200" cy="240" r="150" stroke="#0F172A" stroke-width="22"/>
+        <circle cx="200" cy="240" r="150" stroke="#0066FF" stroke-width="18" stroke-dasharray="6,4"/>
+        <circle cx="200" cy="240" r="120" stroke="#0F172A" stroke-width="22"/>
+        <circle cx="200" cy="240" r="120" stroke="#38BDF8" stroke-width="18" stroke-dasharray="6,4"/>
+        <circle cx="200" cy="240" r="90" stroke="#0F172A" stroke-width="22"/>
+        <circle cx="200" cy="240" r="90" stroke="#0066FF" stroke-width="18" stroke-dasharray="6,4"/>
+      </g>
+
+      <!-- Leather / Silicone Cable Organizer Strap -->
+      <rect x="175" y="140" width="50" height="200" rx="10" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+      <circle cx="200" cy="165" r="8" fill="url(#titaniumGrad)"/>
+      <circle cx="200" cy="315" r="8" fill="url(#titaniumGrad)"/>
+      <text x="200" y="245" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="900" fill="#38BDF8" transform="rotate(-90 200 245)">APEX 100W</text>
+
+      <!-- Connector Head 1 (Foreground Right) -->
+      <g transform="translate(250, 40) rotate(32)">
+        <!-- Strain Relief Rubber Collar -->
+        <rect x="0" y="80" width="32" height="40" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+        <!-- Matte Zinc Alloy Housing -->
+        <rect x="-4" y="15" width="40" height="70" rx="8" fill="url(#titaniumGrad)" stroke="#475569" stroke-width="1.5"/>
+        <!-- Realtime Wattage LED Display Window -->
+        <rect x="4" y="30" width="24" height="40" rx="4" fill="#020617"/>
+        <text x="16" y="55" text-anchor="middle" font-family="monospace" font-size="9" font-weight="900" fill="#10B981">100W</text>
+        <!-- Reversible Gold-Plated USB-C Plug -->
+        <rect x="2" y="-20" width="28" height="35" rx="5" fill="url(#goldGrad)" stroke="#B45309" stroke-width="1"/>
+        <line x1="8" y1="-5" x2="24" y2="-5" stroke="#78350F" stroke-width="2"/>
+      </g>
+
+      <!-- Connector Head 2 (Foreground Left) -->
+      <g transform="translate(60, 280) rotate(-45)">
+        <rect x="0" y="80" width="32" height="40" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+        <rect x="-4" y="15" width="40" height="70" rx="8" fill="url(#titaniumGrad)" stroke="#475569" stroke-width="1.5"/>
+        <rect x="2" y="-20" width="28" height="35" rx="5" fill="url(#goldGrad)" stroke="#B45309" stroke-width="1"/>
+      </g>
+    </g>
+  
+  </g>
+
+  <!-- Technical Packshot Watermark & Badge -->
+  <g opacity="0.75">
+    <rect x="40" y="40" width="160" height="26" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="54" cy="53" r="4" fill="#0066FF"/>
+    <text x="66" y="57" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="1">APEX VERIFIED</text>
+  </g>
+
+  <g opacity="0.6" transform="translate(620, 40)">
+    <text x="140" y="16" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="1.5">E-MARKER SMART CHIP</text>
+  </g>
+
+  <!-- Bottom Spec Label -->
+  <g opacity="0.85" transform="translate(400, 755)">
+    <text text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#CBD5E1" letter-spacing="0.5">100W PD BRAIDED TYPE-C CABLE</text>
+  </g>
+</svg>
